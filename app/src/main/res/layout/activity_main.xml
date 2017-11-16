@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activity.MainActivity">
+
+
+    <!-- 底下放置三个切换按钮的布局 -->
+    <LinearLayout
+        android:id="@+id/main_bottonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_white"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/main_btnHome"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/main_btnHome_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/main_homeyes"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/main_btnHome_text"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="首页"
+                android:textSize="14sp"
+                android:textColor="@color/app_theme"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_btnOrder"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/main_btnOrder_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/main_orderno"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/main_btnOrder_text"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="订单"
+                android:textSize="14sp"
+                android:textColor="@color/app_black"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_btnUser"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/main_btnUser_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/main_userno"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/main_btnUser_text"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="我的"
+                android:textSize="14sp"
+                android:textColor="@color/app_black"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 中间放置Fragment的布局 -->
+    <FrameLayout
+        android:id="@+id/main_fragmentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_above="@id/main_bottonlayout"/>
+
+
+</RelativeLayout>

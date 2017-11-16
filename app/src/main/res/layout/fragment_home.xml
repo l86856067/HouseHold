@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activity.MainActivity">
+
+    <!-- 上边放置toolbar的布局 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/homefragment_toolbar"
+        android:layout_width="match_parent"
+        app:contentInsetStart="0dp"
+        android:layout_height="60dp"
+        android:background="@color/app_theme">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">m
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="上海"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_white"/>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_down"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:text="家政"
+                android:textColor="@color/app_white"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="反馈"
+                android:textSize="14sp"
+                android:background="@drawable/shape_main_feedbutton_background"
+                android:gravity="center_vertical"
+                android:textColor="@color/app_white"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/homefragment_toolbar">
+        
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/homefragment_viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp" />
+                    
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@color/app_theme"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp">
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_cleanTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_clean" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="临时保洁"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_hourlyTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_hourly" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="长期钟点工"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_materTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_mater" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="月嫂"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_parentTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_parent" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="育儿嫂"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_nannyTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_nanny" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="保姆"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_oldTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_old" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="老人看护"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_glassTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_glass" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="擦玻璃"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_reclaimTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_reclaim" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="开荒保洁"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:text="01"
+                        android:textColor="@color/regi_green"
+                        android:gravity="center"
+                        android:textSize="80sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_black"
+                        android:layout_marginTop="30dp"
+                        android:text="JINGDIANTUIJIAN"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_black"
+                        android:layout_marginTop="50dp"
+                        android:text="经    典    推    荐"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textColor="@color/app_black"
+                        android:layout_marginTop="70dp"
+                        android:text="最好的/最优惠的/最快的"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_marginTop="70dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:text="更多>>"/>
+
+                </RelativeLayout>
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/app_theme"
+                        android:src="@mipmap/ic_launcher"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:text="02"
+                        android:textColor="@color/regi_green"
+                        android:gravity="center"
+                        android:textSize="80sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_black"
+                        android:layout_marginTop="30dp"
+                        android:text="JINGDIANTUIJIAN"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/app_black"
+                        android:layout_marginTop="50dp"
+                        android:text="经    典    推    荐"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textColor="@color/app_black"
+                        android:layout_marginTop="70dp"
+                        android:text="最好的/最优惠的/最快的"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_marginTop="70dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:text="更多>>"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"></LinearLayout>
+
+            </LinearLayout>
+        
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/homefragment_serviceing"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="您有正在进行的服务，点击查看详情"
+        android:textColor="@color/app_white"
+        android:gravity="center"
+        android:layout_below="@id/homefragment_toolbar"
+        android:background="@color/app_redT"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="android.app.wolf.peoplehousehold.view.activity.PlaceOtherOrderActivity">
+
+    <!-- 上边放置toolbar的布局 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/placeother_toolbar"
+        android:layout_width="match_parent"
+        app:contentInsetStart="0dp"
+        android:layout_height="60dp"
+        android:background="@color/app_theme">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 左上角的返回按钮 -->
+            <ImageView
+                android:id="@+id/placeother_btnBack"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/arrow"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:text="其他需求"
+                android:textColor="@color/app_white"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="您在家政方面的其他需求，请告诉我们，我们会尽快为您找到合适的服务，并于一小时内联系您。"
+        android:padding="10dp"
+        android:lineSpacingExtra="7dp"
+        android:textSize="15sp"/>
+    <EditText
+        android:id="@+id/placeother_edit"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="start"
+        android:background="@drawable/shape_feedback_editlayout"/>
+
+    <Button
+        android:id="@+id/placeother_btnCommit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/app_white"
+        android:background="@drawable/shape_home_other_button"
+        android:text="提交"/>
+</LinearLayout>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context="android.app.wolf.peoplehousehold.view.activity.AboutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/treaty_image"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/app_white"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/app_red"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="服务介绍"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/app_texthui"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/app_texthui"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/app_theme"
+                    android:text="快选保洁："/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/layout_treaty_text1"
+                    android:text="平台通过多个数据维度，自动为您匹配最合适，最专业的阿姨"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/app_theme"
+                    android:text="精选保洁："/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/layout_treaty_text2"
+                    android:text="用户可根据自己的需求，自行选择自己满意的阿姨"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/app_white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/app_red"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="服务标准"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/app_texthui"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/app_texthui"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1、"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/layout_treaty_text3"
+                    android:text="地面干净，离开时带走垃圾"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2、"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/layout_treaty_text4"
+                    android:text="室内整体光亮无尘，镜面及室内玻璃无污渍，无水印，物品整齐归类"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3、"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/layout_treaty_text5"
+                    android:text="厨房清洁无油烟，浴室无水渍，水龙头以及水池无污渍，无水印，无杂物"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/app_white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/app_red"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="特约须知"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/app_texthui"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/app_texthui"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_image4"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_yellow"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/layout_treaty_image4"
+                    android:text="单次订单可预约7天内的保洁服务，周期订单可预约5周内的多次保洁服务"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_image5"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_yellow"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/layout_treaty_image5"
+                    android:text="请您根据房屋面积大小及洁净程度合理预估服务时长，实际服务时超出部分需支付额外费用"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/app_white"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@color/app_red"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="特殊说明"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/app_texthui"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/app_texthui"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_image7"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_yellow"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/layout_treaty_image7"
+                    android:text="为保障保洁人员的安全，外墙玻璃、天花板及附属物不在日常保洁范围内"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_image8"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_yellow"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/layout_treaty_image8"
+                    android:text="为保护客户隐私，家具内部不在日常保洁范围内"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_image9"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_yellow"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/layout_treaty_image9"
+                    android:text="宗教摆设、古董字画及其他贵重物品不在日常保洁范围内"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/layout_treaty_image10"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_yellow"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/layout_treaty_image10"
+                    android:text="做饭、洗衣、洗鱼缸不在日常保洁范围内"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

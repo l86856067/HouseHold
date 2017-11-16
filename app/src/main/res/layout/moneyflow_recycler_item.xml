@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="1dp"
+    android:background="@drawable/shape_listitem_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/moneyflow_name"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="充值"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:textColor="@color/app_black"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/moneyflow_icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/icon_date"
+        android:layout_below="@id/moneyflow_name"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/moneyflow_date"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_below="@id/moneyflow_name"
+        android:layout_toRightOf="@id/moneyflow_icon"
+        android:text="2017-12-1"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/moneyflow_money"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="+199"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginRight="10dp"/>
+
+
+</RelativeLayout>

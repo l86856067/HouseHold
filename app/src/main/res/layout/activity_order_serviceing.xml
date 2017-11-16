@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="android.app.wolf.peoplehousehold.view.activity.OrderServiceingActivity">
+
+    <!-- 上边放置toolbar的布局 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/serviceing_toolbar"
+        android:layout_width="match_parent"
+        app:contentInsetStart="0dp"
+        android:layout_height="60dp"
+        android:background="@color/app_theme">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 左上角的返回按钮 -->
+            <ImageView
+                android:id="@+id/serviceing_btnBack"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/arrow"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:text="服务中"
+                android:textColor="@color/app_white"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/serviceing_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/serviceing_toolbar">
+
+        <ListView
+            android:id="@+id/serviceing_lsit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

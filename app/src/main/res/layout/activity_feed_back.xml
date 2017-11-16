@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_background"
+    tools:context="android.app.wolf.peoplehousehold.view.activity.FeedBackActivity">
+
+    <!-- 上边放置toolbar的布局 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/feedback_toolbar"
+        android:layout_width="match_parent"
+        app:contentInsetStart="0dp"
+        android:layout_height="60dp"
+        android:background="@color/app_theme">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 左上角的返回按钮 -->
+            <ImageView
+                android:id="@+id/feedback_btnBack"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/arrow"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:text="意见反馈"
+                android:textColor="@color/app_white"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/feedback_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/app_white"
+                android:layout_height="220dp">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/feedback_service"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="客户满意使我们的最高宗旨\n我们的客服团队会尽心为您解答您提出的问题"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:id="@+id/feedback_contact"
+                        android:layout_width="1dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/shape_feebback_btnbackground"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/feeb_phone"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/app_white"
+                            android:text="联系客服"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/feedback_opinion"
+                        android:layout_width="1dp"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/shape_feebback_btnbackground"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/feeb_yijian"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/app_white"
+                            android:text="意见反馈"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/feedback_editLayout"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:background="@color/app_white"
+                android:visibility="gone"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="请留下您的宝贵意见"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/app_texthui"/>
+                <EditText
+                    android:id="@+id/feedback_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:padding="2dp"
+                    android:background="@drawable/shape_feedback_editlayout"
+                    android:gravity="start"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/feedback_commit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:background="@drawable/shape_feebback_bigbtnbackground"
+                android:textColor="@color/app_white"
+                android:text="提交"/>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="常见问题"
+                android:layout_marginLeft="15dp"
+                android:textSize="22sp"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="问：我提交四个小时的订单是几位阿姨来打扫"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/app_texthui" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="答：我们每位阿姨是两个小时起订，四个小时可以安排两个阿姨同时做两个小时，需要您在提交订单时备注一下"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/app_white"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="问：阿姨会准时上门服务吗"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/app_texthui" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="答：阿姨会按照您预订的时间准时上门服务的，请保持电话畅通，如有问题会及时联系您。"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

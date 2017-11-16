@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activity.MainActivity">
+
+    <!-- 上边放置toolbar的布局 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/orderfragment_toolbar"
+        android:layout_width="match_parent"
+        app:contentInsetStart="0dp"
+        android:layout_height="60dp"
+        android:background="@color/app_theme">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">m
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:text="家政"
+                android:textColor="@color/app_white"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="反馈"
+                android:textSize="14sp"
+                android:background="@drawable/shape_main_feedbutton_background"
+                android:gravity="center_vertical"
+                android:textColor="@color/app_white"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/orderfragment_searchLayout"
+        android:layout_below="@id/orderfragment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_white">
+
+        <RelativeLayout
+            android:id="@+id/hisfragment_search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/shape_order_sousuobackground">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/order_sousuo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="搜索订单"
+                android:textColor="@color/app_texthui"
+                android:layout_centerInParent="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/orderfragment_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/orderfragment_searchLayout">
+
+        <ListView
+            android:id="@+id/orderfragment_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

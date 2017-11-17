@@ -11,6 +11,7 @@ import android.app.wolf.peoplehousehold.view.activity.PlaceLongOrderActivity;
 import android.app.wolf.peoplehousehold.view.activity.PlaceOtherOrderActivity;
 import android.app.wolf.peoplehousehold.view.activity.PlaceReclaimOrderActivity;
 import android.app.wolf.peoplehousehold.view.activity.PlaceShortOrderActivity;
+import android.app.wolf.peoplehousehold.view.detailsactivity.ClernDetaActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -145,9 +146,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.homefragment_cleanTop:
 
-                Intent cleanIntent = new Intent(getActivity(),PlaceShortOrderActivity.class);
-                cleanIntent.putExtra("serviceItemId",1);
-                cleanIntent.putExtra("title","临时保洁");
+//                Intent cleanIntent = new Intent(getActivity(),PlaceShortOrderActivity.class);
+//                cleanIntent.putExtra("serviceItemId",1);
+//                cleanIntent.putExtra("title","临时保洁");
+//                startActivity(cleanIntent);
+
+                Intent cleanIntent = new Intent(getActivity(), ClernDetaActivity.class);
                 startActivity(cleanIntent);
 
                 break;

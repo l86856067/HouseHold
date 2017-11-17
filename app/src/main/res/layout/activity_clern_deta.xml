@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="android.app.wolf.peoplehousehold.view.detailsactivity.ClernDetaActivity">
+
+    <!-- 上边放置toolbar的布局 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/cleandeta_toolbar"
+        android:layout_width="match_parent"
+        app:contentInsetStart="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_lefttoright">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 左上角的返回按钮 -->
+            <ImageView
+                android:id="@+id/cleandeta_btnBack"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/leftback"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:text="临时保洁"
+                android:textColor="@color/app_white"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/cleandeta_bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_white"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/cleandeta_service"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/service_s"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:text="联系客服"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cleandeta_place"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/btnbg"
+            android:text="下单"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/app_white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cleandeta_toolbar"
+        android:layout_above="@id/cleandeta_bottomLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/regi_green"
+                android:layout_gravity="center_horizontal"
+                android:text="FUWUJIESHAO"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/regi_green"
+                android:layout_gravity="center_horizontal"
+                android:text="服   务   介   绍"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/app_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textColor="@color/regi_green"
+                    android:layout_gravity="center_horizontal"
+                    android:text="| 快速匹配"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="平台可通过多个数据维度，自动为您匹配最合适、最专业的阿姨"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textColor="@color/regi_green"
+                    android:layout_gravity="center_horizontal"
+                    android:text="| 指定服务"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="可指定阿姨为您服务"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/app_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textColor="@color/regi_green"
+                    android:layout_gravity="center_horizontal"
+                    android:text="| 服务内容"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="1.清洁厨房灶面池面\n2.清洁卫生间马桶水池瓷砖\n3.清洁客厅卧室\n4.清洁地板边角灰尘\n5.物品摆放整齐"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/app_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textColor="@color/regi_green"
+                    android:layout_gravity="center_horizontal"
+                    android:text="| 预约须知"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="1.家电清洗，贵重物品不在保洁范围内\n2.服务前两小时取消订单，扣除总额的10%作为违约金；服务前1小时取消订单，扣除总额的30%作为违约金\n3.不含发票开具"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:textColor="@color/regi_green"
+                    android:layout_gravity="center_horizontal"
+                    android:text="| 温馨提示"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="小于50平米        2小时/人\n50-100平米        2小时/人\n大于100平米        2小时/人"/>
+                
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

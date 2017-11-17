@@ -12,8 +12,8 @@
         android:id="@+id/homefragment_toolbar"
         android:layout_width="match_parent"
         app:contentInsetStart="0dp"
-        android:layout_height="60dp"
-        android:background="@color/app_theme">
+        android:layout_height="44dp"
+        android:background="@drawable/shape_hometoolbar">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">m
@@ -23,38 +23,28 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="上海"
-                    android:gravity="center_vertical"
-                    android:textSize="16sp"
-                    android:textColor="@color/app_white"/>
+
                 <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/arrow_down"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/home_location"/>
+
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:textSize="20sp"
-                android:text="家政"
-                android:textColor="@color/app_white"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
+            <ImageView
+                android:layout_width="60dp"
                 android:layout_height="30dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_toolimg"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
                 android:text="反馈"
-                android:textSize="14sp"
-                android:background="@drawable/shape_main_feedbutton_background"
-                android:gravity="center_vertical"
-                android:textColor="@color/app_white"
+                android:textSize="11sp"
+                android:background="@drawable/righttext"
+                android:gravity="center"
+                android:textColor="@color/hometextwhite"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"/>
@@ -74,7 +64,7 @@
                 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="250dp">
+                    android:layout_height="270dp">
 
                     <android.support.v4.view.ViewPager
                         android:id="@+id/homefragment_viewPager"
@@ -83,17 +73,96 @@
                     
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@color/app_theme"
+                        android:layout_height="100dp"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginRight="50dp">
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/home_imag1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:textSize="7sp"
+                            android:text="查看更多"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginRight="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginLeft="65dp"
+                            android:textSize="11sp"
+                            android:textColor="@color/app_texthui"
+                            android:text="1.柠檬皮，橘子皮，茶叶残渣可以去除冰箱异味"/>
 
                     </RelativeLayout>
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:text="01"
+                        android:textColor="@color/homebigtext"
+                        android:gravity="center"
+                        android:textSize="80sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#3c4144"
+                        android:layout_marginTop="35dp"
+                        android:text="FUWUXIANGMU"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="#3c4144"
+                        android:layout_marginTop="55dp"
+                        android:text="服  务  项  目"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textColor="#767c76"
+                        android:layout_marginTop="75dp"
+                        android:textSize="10sp"
+                        android:text="全面/品质/保障"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_marginTop="70dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:text="更多>>"/>
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -119,7 +188,7 @@
                                 android:layout_height="50dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/home_clean" />
+                                android:src="@drawable/home_icon1" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
@@ -128,122 +197,6 @@
                                 android:textSize="12sp"
                                 android:layout_marginBottom="10dp"
                                 android:text="临时保洁"/>
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/homefragment_hourlyTop"
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp"
-                                android:src="@drawable/home_hourly" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:layout_alignParentBottom="true"
-                                android:gravity="center"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="10dp"
-                                android:text="长期钟点工"/>
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/homefragment_materTop"
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp"
-                                android:src="@drawable/home_mater" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:layout_alignParentBottom="true"
-                                android:gravity="center"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="10dp"
-                                android:text="月嫂"/>
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/homefragment_parentTop"
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp"
-                                android:src="@drawable/home_parent" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:layout_alignParentBottom="true"
-                                android:gravity="center"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="10dp"
-                                android:text="育儿嫂"/>
-                        </RelativeLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp">
-
-                        <RelativeLayout
-                            android:id="@+id/homefragment_nannyTop"
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp"
-                                android:src="@drawable/home_nanny" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:layout_alignParentBottom="true"
-                                android:gravity="center"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="10dp"
-                                android:text="保姆"/>
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/homefragment_oldTop"
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp"
-                                android:src="@drawable/home_old" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:layout_alignParentBottom="true"
-                                android:gravity="center"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="10dp"
-                                android:text="老人看护"/>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -257,7 +210,7 @@
                                 android:layout_height="50dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/home_glass" />
+                                android:src="@drawable/home_icon2" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
@@ -266,6 +219,100 @@
                                 android:textSize="12sp"
                                 android:layout_marginBottom="10dp"
                                 android:text="擦玻璃"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_oldTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_icon3" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="老人看护"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_nannyTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_icon4" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="保姆"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_hourlyTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_icon5" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="长期钟点工"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_parentTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_icon6" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="育儿嫂"/>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -279,7 +326,7 @@
                                 android:layout_height="50dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
-                                android:src="@drawable/home_reclaim" />
+                                android:src="@drawable/home_icon7" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
@@ -288,6 +335,28 @@
                                 android:textSize="12sp"
                                 android:layout_marginBottom="10dp"
                                 android:text="开荒保洁"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/homefragment_materTop"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/home_icon8" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="月嫂"/>
                         </RelativeLayout>
                     </LinearLayout>
 
@@ -301,8 +370,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:text="01"
-                        android:textColor="@color/regi_green"
+                        android:text="02"
+                        android:textColor="@color/homebigtext"
                         android:gravity="center"
                         android:textSize="80sp"/>
 
@@ -310,30 +379,33 @@
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
                         android:gravity="center"
                         android:textSize="16sp"
-                        android:textColor="@color/app_black"
-                        android:layout_marginTop="30dp"
+                        android:textColor="#3c4144"
+                        android:layout_marginTop="35dp"
                         android:text="JINGDIANTUIJIAN"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp"
+                        android:layout_height="17dp"
                         android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
                         android:gravity="center"
-                        android:textSize="16sp"
-                        android:textColor="@color/app_black"
-                        android:layout_marginTop="50dp"
-                        android:text="经    典    推    荐"/>
+                        android:textSize="14sp"
+                        android:textColor="#3c4144"
+                        android:layout_marginTop="55dp"
+                        android:text="经  典  推  荐"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp"
+                        android:layout_height="15dp"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:textColor="@color/app_black"
-                        android:layout_marginTop="70dp"
-                        android:text="最好的/最优惠的/最快的"/>
+                        android:textColor="#767c76"
+                        android:layout_marginTop="75dp"
+                        android:textSize="10sp"
+                        android:text="快速/便捷/高效"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -359,7 +431,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/app_theme"
-                        android:src="@mipmap/ic_launcher"/>
+                        android:src="@drawable/home_img2_bg"
+                        android:scaleType="centerCrop"/>
 
                 </RelativeLayout>
 
@@ -371,8 +444,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:text="02"
-                        android:textColor="@color/regi_green"
+                        android:text="03"
+                        android:textColor="@color/homebigtext"
                         android:gravity="center"
                         android:textSize="80sp"/>
 
@@ -380,30 +453,33 @@
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
                         android:gravity="center"
                         android:textSize="16sp"
-                        android:textColor="@color/app_black"
-                        android:layout_marginTop="30dp"
-                        android:text="JINGDIANTUIJIAN"/>
+                        android:textColor="#3c4144"
+                        android:layout_marginTop="35dp"
+                        android:text="REMENZIXUN"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp"
+                        android:layout_height="17dp"
                         android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
                         android:gravity="center"
-                        android:textSize="16sp"
-                        android:textColor="@color/app_black"
-                        android:layout_marginTop="50dp"
-                        android:text="经    典    推    荐"/>
+                        android:textSize="14sp"
+                        android:textColor="#3c4144"
+                        android:layout_marginTop="55dp"
+                        android:text="热  门  资  讯"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="20dp"
+                        android:layout_height="15dp"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:textColor="@color/app_black"
-                        android:layout_marginTop="70dp"
-                        android:text="最好的/最优惠的/最快的"/>
+                        android:textColor="#767c76"
+                        android:layout_marginTop="75dp"
+                        android:textSize="10sp"
+                        android:text="及时/精彩/吸睛"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -420,13 +496,165 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"></LinearLayout>
+                    android:layout_height="85dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#27b82e"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="LIEF THE TRICK"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:textColor="#f5f5f5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="生活  窍门"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:textColor="#f5f5f5"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/home_lay3_img1"
+                        android:scaleType="centerCrop"/>
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"></LinearLayout>
+                    android:layout_height="85dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#2f8c34"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="KNOWLEDGE"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:textColor="#f5f5f5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="最新小知识"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:textColor="#f5f5f5"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/home_lay3_img2"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#2f8c34"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="CLEAN"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:textColor="#f5f5f5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="清 洁"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:textColor="#f5f5f5"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"></LinearLayout>
+                    android:layout_height="85dp"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/home_lay3_img3"
+                        android:scaleType="centerCrop"/>
+
+                    <RelativeLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#33bb3d"
+                        android:layout_weight="1">
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="HOMEMAKING"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:textColor="#f5f5f5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textSize="15sp"
+                            android:text="家 政"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:textColor="#f5f5f5"/>
+                        
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/home_lay3_img4"
+                        android:scaleType="centerCrop"/>
+
+                </LinearLayout>
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
 
             </LinearLayout>
         

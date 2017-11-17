@@ -374,7 +374,6 @@ public class OrderDetailsActivity extends AppCompatActivity {
         orderdetails_servicepeopleinfo = (TextView) findViewById(R.id.orderdetails_servicepeopleinfo);
         orderdetails_evaluateLayout = (LinearLayout) findViewById(R.id.orderdetails_evaluateLayout);
         orderdetails_evaluateEdit = (EditText) findViewById(R.id.orderdetails_evaluateEdit);
-        orderdetails_servicestatus = (TextView) findViewById(R.id.orderdetails_servicestatus);
 
         orderdetails_btnbotton = (TextView) findViewById(R.id.orderdetails_btnbotton);
 

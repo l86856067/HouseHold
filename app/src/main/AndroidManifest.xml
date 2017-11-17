@@ -51,7 +51,8 @@
             android:exported="false"
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity android:name=".view.activity.PlaceReclaimOrderActivity"></activity>
+        <activity android:name=".view.activity.PlaceReclaimOrderActivity" />
+        <activity android:name=".view.detailsactivity.ClernDetaActivity"></activity>
     </application>
 
 </manifest>

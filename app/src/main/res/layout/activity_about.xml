@@ -27,8 +27,9 @@
                 android:gravity="center"/>
             <ImageView
                 android:id="@+id/about_back"
-                android:layout_width="20dp"
-                android:layout_height="30dp"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@drawable/shape_back_10"
                 android:padding="5dp"
                 android:src="@drawable/arrow"
                 android:layout_centerVertical="true"
@@ -43,12 +44,13 @@
         android:layout_marginTop="50dp"
         android:layout_below="@id/about_toolbar"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/user_logo"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/about_image"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
         android:lineSpacingExtra="7dp"
         android:textSize="15sp"
@@ -56,12 +58,29 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:text="《上海家菲猫家政用户协议》"
         android:textSize="14sp"
         android:textColor="@color/app_theme"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/houtou"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="家菲猫  版权所有"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"/>
 
 </RelativeLayout>

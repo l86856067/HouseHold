@@ -42,9 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView main_btnHome_image;
     private ImageView main_btnOrder_image;
     private ImageView main_btnUser_image;
-    private TextView main_btnHome_text;
-    private TextView main_btnOrder_text;
-    private TextView main_btnUser_text;
 
     private HomeFragment homeFragment;
     private OrderFragment orderFragment;
@@ -93,34 +90,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.main_btnHome:
 
-                main_btnHome_image.setImageResource(R.drawable.main_homeyes);
-                main_btnOrder_image.setImageResource(R.drawable.main_orderno);
-                main_btnUser_image.setImageResource(R.drawable.main_userno);
-                main_btnHome_text.setTextColor(getResources().getColor(R.color.app_theme));
-                main_btnOrder_text.setTextColor(getResources().getColor(R.color.app_black));
-                main_btnUser_text.setTextColor(getResources().getColor(R.color.app_black));
+                main_btnHome_image.setImageResource(R.drawable.main_btnhome2);
+                main_btnOrder_image.setImageResource(R.drawable.main_btnorder1);
+                main_btnUser_image.setImageResource(R.drawable.main_btnuser1);
 
                 FragmentUtils.judgeToShow(fragmentManager,homeFragment);
                 break;
             case R.id.main_btnOrder:
 
-                main_btnHome_image.setImageResource(R.drawable.main_homeno);
-                main_btnOrder_image.setImageResource(R.drawable.main_orderyes);
-                main_btnUser_image.setImageResource(R.drawable.main_userno);
-                main_btnHome_text.setTextColor(getResources().getColor(R.color.app_black));
-                main_btnOrder_text.setTextColor(getResources().getColor(R.color.app_theme));
-                main_btnUser_text.setTextColor(getResources().getColor(R.color.app_black));
+                main_btnHome_image.setImageResource(R.drawable.main_btnhome1);
+                main_btnOrder_image.setImageResource(R.drawable.main_btnorder2);
+                main_btnUser_image.setImageResource(R.drawable.main_btnuser1);
 
                 FragmentUtils.judgeToShow(fragmentManager,orderFragment);
                 break;
             case R.id.main_btnUser:
 
-                main_btnHome_image.setImageResource(R.drawable.main_homeno);
-                main_btnOrder_image.setImageResource(R.drawable.main_orderno);
-                main_btnUser_image.setImageResource(R.drawable.main_useryes);
-                main_btnHome_text.setTextColor(getResources().getColor(R.color.app_black));
-                main_btnOrder_text.setTextColor(getResources().getColor(R.color.app_black));
-                main_btnUser_text.setTextColor(getResources().getColor(R.color.app_theme));
+                main_btnHome_image.setImageResource(R.drawable.main_btnhome1);
+                main_btnOrder_image.setImageResource(R.drawable.main_btnorder1);
+                main_btnUser_image.setImageResource(R.drawable.main_btnuser2);
 
                 FragmentUtils.judgeToShow(fragmentManager,userFragment);
                 break;
@@ -147,9 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         main_btnHome_image = (ImageView) findViewById(R.id.main_btnHome_image);
         main_btnOrder_image = (ImageView) findViewById(R.id.main_btnOrder_image);
         main_btnUser_image = (ImageView) findViewById(R.id.main_btnUser_image);
-        main_btnHome_text = (TextView) findViewById(R.id.main_btnHome_text);
-        main_btnOrder_text = (TextView) findViewById(R.id.main_btnOrder_text);
-        main_btnUser_text = (TextView) findViewById(R.id.main_btnUser_text);
 
         homeFragment = new HomeFragment();
         orderFragment = new OrderFragment();

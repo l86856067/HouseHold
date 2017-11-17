@@ -3,6 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="left">#2eb23c</color>
+    <color name="right">#22bc60</color>
+    <color name="btnbg">#2eb23c</color>
+    <color name="hometextwhite">#fff</color>
+    <color name="homebigtext">#7ee384</color>
+
     <color name="app_textblack">#272727</color>
     <color name="app_texthui">#a8a7a7</color>
     <color name="app_background">#f2f2f2</color>

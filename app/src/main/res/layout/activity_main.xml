@@ -23,20 +23,20 @@
             android:layout_weight="1">
             <ImageView
                 android:id="@+id/main_btnHome_image"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/main_homeyes"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/main_btnhome2"
                 android:layout_centerHorizontal="true"/>
-            <TextView
-                android:id="@+id/main_btnHome_text"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="首页"
-                android:textSize="14sp"
-                android:textColor="@color/app_theme"
-                android:gravity="center"
-                android:layout_alignParentBottom="true"/>
+            <!--<TextView-->
+                <!--android:id="@+id/main_btnHome_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:text="首页"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="@color/app_theme"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_alignParentBottom="true"/>-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -46,20 +46,20 @@
             android:layout_weight="1">
             <ImageView
                 android:id="@+id/main_btnOrder_image"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/main_orderno"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/main_btnorder1"
                 android:layout_centerHorizontal="true"/>
-            <TextView
-                android:id="@+id/main_btnOrder_text"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="订单"
-                android:textSize="14sp"
-                android:textColor="@color/app_black"
-                android:gravity="center"
-                android:layout_alignParentBottom="true"/>
+            <!--<TextView-->
+                <!--android:id="@+id/main_btnOrder_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:text="订单"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="@color/app_black"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_alignParentBottom="true"/>-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -69,20 +69,20 @@
             android:layout_weight="1">
             <ImageView
                 android:id="@+id/main_btnUser_image"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/main_userno"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/main_btnuser1"
                 android:layout_centerHorizontal="true"/>
-            <TextView
-                android:id="@+id/main_btnUser_text"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="我的"
-                android:textSize="14sp"
-                android:textColor="@color/app_black"
-                android:gravity="center"
-                android:layout_alignParentBottom="true"/>
+            <!--<TextView-->
+                <!--android:id="@+id/main_btnUser_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:text="我的"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textColor="@color/app_black"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_alignParentBottom="true"/>-->
         </RelativeLayout>
 
     </LinearLayout>

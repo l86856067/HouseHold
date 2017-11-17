@@ -35,6 +35,7 @@
                 android:layout_marginLeft="15dp"/>
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
+
     <RelativeLayout
         android:id="@+id/recharge_moneyLayout"
         android:layout_width="match_parent"
@@ -42,6 +43,7 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:background="@color/app_white"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/recharge_toolbar">
         <TextView
             android:layout_width="wrap_content"
@@ -59,26 +61,14 @@
     </RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/recharge_btnPay"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/app_theme"
-        android:text="充值"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@color/app_white"/>
-
     <RadioGroup
-        android:id="@+id/recharge_radiogroup"
+        android:id="@+id/recharge_radiogroup1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_above="@id/recharge_btnPay"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/recharge_moneyLayout"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="3">
 
         <RadioButton
             android:id="@+id/recharge_radioBtn1"
@@ -87,115 +77,102 @@
             android:background="@drawable/recharge_radio"
             android:button="@null"
             android:gravity="center"
+            android:layout_marginLeft="20dp"
             android:textSize="20sp"
             android:layout_weight="1"
-            android:text="50元"/>
+            android:text="10元"/>
+
         <RadioButton
             android:id="@+id/recharge_radioBtn2"
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@drawable/recharge_radio"
             android:button="@null"
-            android:layout_marginLeft="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:gravity="center"
             android:textSize="20sp"
             android:layout_weight="1"
-            android:text="100元"/>
+            android:text="20元"/>
+
         <RadioButton
             android:id="@+id/recharge_radioBtn3"
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@drawable/recharge_radio"
-            android:layout_marginLeft="1dp"
+            android:layout_marginRight="20dp"
             android:button="@null"
             android:gravity="center"
             android:textSize="20sp"
             android:layout_weight="1"
-            android:text="200元"/>
+            android:text="50元"/>
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/recharge_radiogroup2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/recharge_radiogroup1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
         <RadioButton
             android:id="@+id/recharge_radioBtn4"
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@drawable/recharge_radio"
-            android:layout_marginLeft="1dp"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="100元"/>
+
+        <RadioButton
+            android:id="@+id/recharge_radioBtn5"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/recharge_radio"
+            android:button="@null"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="200元"/>
+
+        <RadioButton
+            android:id="@+id/recharge_radioBtn6"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/recharge_radio"
+            android:layout_marginRight="20dp"
             android:button="@null"
             android:gravity="center"
             android:textSize="20sp"
             android:layout_weight="1"
             android:text="500元"/>
 
-
     </RadioGroup>
 
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recharge_recycler"
+
+    <TextView
+        android:id="@+id/recharge_btnPay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_below="@id/recharge_moneyLayout"
-        android:layout_above="@id/recharge_radiogroup"
-        android:layout_marginBottom="20dp">
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/app_theme"
+        android:text="充值"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/app_white"/>
 
-    </android.support.v7.widget.RecyclerView>
-    
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="101dp"-->
-        <!--android:layout_above="@id/recharge_btnPay"-->
-        <!--android:background="@drawable/shape_recharge_buttonlayout"-->
-        <!--android:layout_marginLeft="10dp"-->
-        <!--android:layout_marginRight="10dp">-->
-
-        <!--<View-->
-            <!--android:id="@+id/recharge_line"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="0.1dp"-->
-            <!--android:background="@color/app_texthui"-->
-            <!--android:layout_centerVertical="true"/>-->
-        <!--<View-->
-            <!--android:id="@+id/recharge_vline"-->
-            <!--android:layout_width="0.1dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:background="@color/app_texthui"/>-->
-        <!--<TextView-->
-            <!--android:id="@+id/recharge_btnMoney1"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_toLeftOf="@id/recharge_vline"-->
-            <!--android:layout_above="@id/recharge_line"-->
-            <!--android:text="50元"-->
-            <!--android:gravity="center"-->
-            <!--android:textSize="20sp"/>-->
-        <!--<TextView-->
-            <!--android:id="@+id/recharge_btnMoney2"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_toRightOf="@id/recharge_vline"-->
-            <!--android:layout_above="@id/recharge_line"-->
-            <!--android:text="100元"-->
-            <!--android:gravity="center"-->
-            <!--android:textSize="20sp"/>-->
-        <!--<TextView-->
-            <!--android:id="@+id/recharge_btnMoney3"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_toLeftOf="@id/recharge_vline"-->
-            <!--android:layout_below="@id/recharge_line"-->
-            <!--android:text="200元"-->
-            <!--android:gravity="center"-->
-            <!--android:textSize="20sp"/>-->
-        <!--<TextView-->
-            <!--android:id="@+id/recharge_btnMoney4"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_toRightOf="@id/recharge_vline"-->
-            <!--android:layout_below="@id/recharge_line"-->
-            <!--android:text="500元"-->
-            <!--android:gravity="center"-->
-            <!--android:textSize="20sp"/>-->
-
-    <!--</RelativeLayout>-->
 
 </RelativeLayout>

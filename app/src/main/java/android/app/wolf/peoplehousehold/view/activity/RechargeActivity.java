@@ -8,6 +8,7 @@ import android.app.wolf.peoplehousehold.http.bean.UserInfoBean;
 import android.app.wolf.peoplehousehold.http.httpinterface.HttpRequest;
 import android.app.wolf.peoplehousehold.utils.RetrofitUtils;
 import android.app.wolf.peoplehousehold.utils.ToastUtils;
+import android.app.wolf.peoplehousehold.view.myview.PayBottomDialog;
 import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
@@ -34,13 +35,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RechargeActivity extends AppCompatActivity implements View.OnClickListener {
+public class RechargeActivity extends AppCompatActivity implements View.OnClickListener,RadioGroup.OnCheckedChangeListener {
 
     private ImageView recharge_back;
     private TextView recharge_money;
-    private RecyclerView recharge_recycler;
-    private MoneyFlowAdapter adapter;
-    private RadioGroup recharge_radiogroup;
+    private RadioGroup recharge_radiogroup1;
+    private RadioGroup recharge_radiogroup2;
     private TextView recharge_btnPay;
 
     private SharedPreferences sharedPreferences;
@@ -56,7 +56,7 @@ public class RechargeActivity extends AppCompatActivity implements View.OnClickL
     List<MoneyFlowBean.RowsBean> list;
 
     private float money = 0;
-    private double rechargeMoney = 0;
+    private float rechargeMoney = 0;
 
     private Handler handler = new Handler(){
         @Override
@@ -70,19 +70,7 @@ public class RechargeActivity extends AppCompatActivity implements View.OnClickL
 
                     if (result.equals("9000")){
                         ToastUtils.showShortToast("充值成功");
-
-//                        new Thread(){
-//                            @Override
-//                            public void run() {
-//                                super.run();
-//                                try {
-//                                    Thread.sleep(1000);
-                                    handler.sendEmptyMessage(2);
-//                                } catch (InterruptedException e) {
-//                                    e.printStackTrace();
-//                                }
-//                            }
-//                        }.start();
+                        handler.sendEmptyMessage(2);
                     }
                     break;
                 case 2:
@@ -120,91 +108,24 @@ public class RechargeActivity extends AppCompatActivity implements View.OnClickL
 
         initView();
 
-        getMoneyFlow(initpage,3);
-
         setListener();
     }
 
-    private void getMoneyFlow(int page,int sign) {
-        HttpRequest getFlowRequest = RetrofitUtils.getRetrofitInstance().create(HttpRequest.class);
-        getFlowRequest.postIdtoUserMoneyFlowList(userId,1,15).enqueue(new Callback<MoneyFlowBean>() {
-            @Override
-            public void onResponse(Call<MoneyFlowBean> call, Response<MoneyFlowBean> response) {
-                MoneyFlowBean body = response.body();
-                maxpage = (body.getTotal() / rows) + 1;
-                nowpage = body.getPageNum();
-                List<MoneyFlowBean.RowsBean> rows = body.getRows();
-                if (rows != null){
-                    for (int i = 0 ; i < rows.size() ; i ++){
-                        list.add(rows.get(i));
-                    }
-                adapter = new MoneyFlowAdapter(RechargeActivity.this,list);
-                recharge_recycler.setAdapter(adapter);
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<MoneyFlowBean> call, Throwable t) {
-
-            }
-        });
-    }
 
     private void setListener() {
         recharge_back.setOnClickListener(this);
         recharge_btnPay.setOnClickListener(this);
 
-        recharge_recycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-
-                RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
-                int itemNum = layoutManager.getItemCount();
-//                layoutManager.findl
-
-            }
-        });
-
-        recharge_radiogroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId){
-                    case R.id.recharge_radioBtn1:
-//                        rechargeMoney = 50;
-                        rechargeMoney = 0.01;
-                        break;
-                    case R.id.recharge_radioBtn2:
-//                        rechargeMoney = 100;
-                        rechargeMoney = 0.02;
-                        break;
-                    case R.id.recharge_radioBtn3:
-//                        rechargeMoney = 200;
-                        rechargeMoney = 0.03;
-                        break;
-                    case R.id.recharge_radioBtn4:
-//                        rechargeMoney = 500;
-                        rechargeMoney = 0.04;
-                        break;
-                }
-            }
-        });
+        recharge_radiogroup1.setOnCheckedChangeListener(this);
+        recharge_radiogroup2.setOnCheckedChangeListener(this);
 
     }
 
     private void initView() {
         recharge_back = (ImageView) findViewById(R.id.recharge_back);
         recharge_money = (TextView) findViewById(R.id.recharge_money);
-        recharge_recycler = (RecyclerView) findViewById(R.id.recharge_recycler);
-        recharge_recycler.setLayoutManager(new LinearLayoutManager(this));
-        recharge_radiogroup = (RadioGroup) findViewById(R.id.recharge_radiogroup);
+        recharge_radiogroup1 = (RadioGroup) findViewById(R.id.recharge_radiogroup1);
+        recharge_radiogroup2 = (RadioGroup) findViewById(R.id.recharge_radiogroup2);
         recharge_btnPay = (TextView) findViewById(R.id.recharge_btnPay);
 
         sharedPreferences = getSharedPreferences("peoplehousehold",MODE_PRIVATE);
@@ -240,6 +161,32 @@ public class RechargeActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void toRecharge() {
+
+        PayBottomDialog dialog = new PayBottomDialog();
+        dialog.setMoneyText(rechargeMoney+"元");
+        dialog.setOnPayListener(new PayBottomDialog.OnPayinterface() {
+            @Override
+            public void pay(int type) {
+                switch (type){
+                    case 0:
+                        ToastUtils.showShortToast("请选择支付方式");
+                        break;
+                    case 1:
+
+                        aliPay();
+
+                        break;
+                    case 2:
+                        ToastUtils.showShortToast("微信支付暂未开通");
+                        break;
+                }
+            }
+        });
+        dialog.show(getSupportFragmentManager(),"RechargeActivity");
+
+    }
+
+    private void aliPay(){
         HttpRequest rechargeRequest = RetrofitUtils.getRetrofitInstance().create(HttpRequest.class);
         rechargeRequest.postIdandMoneytoRecharge(rechargeMoney,userId).enqueue(new Callback<AliPayBean>() {
             @Override
@@ -276,5 +223,41 @@ public class RechargeActivity extends AppCompatActivity implements View.OnClickL
 
             }
         });
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId){
+            case R.id.recharge_radioBtn1:
+                recharge_radiogroup2.clearCheck();
+                recharge_radiogroup1.check(R.id.recharge_radioBtn1);
+                rechargeMoney = (float) 0.01;
+                break;
+            case R.id.recharge_radioBtn2:
+                recharge_radiogroup2.clearCheck();
+                recharge_radiogroup1.check(R.id.recharge_radioBtn2);
+                rechargeMoney = (float) 0.01;
+                break;
+            case R.id.recharge_radioBtn3:
+                recharge_radiogroup2.clearCheck();
+                recharge_radiogroup1.check(R.id.recharge_radioBtn3);
+                rechargeMoney = (float) 0.01;
+                break;
+            case R.id.recharge_radioBtn4:
+                recharge_radiogroup1.clearCheck();
+                recharge_radiogroup2.check(R.id.recharge_radioBtn4);
+                rechargeMoney = (float) 0.01;
+                break;
+            case R.id.recharge_radioBtn5:
+                recharge_radiogroup1.clearCheck();
+                recharge_radiogroup2.check(R.id.recharge_radioBtn5);
+                rechargeMoney = (float) 0.02;
+                break;
+            case R.id.recharge_radioBtn6:
+                recharge_radiogroup1.clearCheck();
+                recharge_radiogroup2.check(R.id.recharge_radioBtn6);
+                rechargeMoney = (float) 0.03;
+                break;
+        }
     }
 }
